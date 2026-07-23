@@ -87,6 +87,31 @@
 }
 
 /* ============================================================
+   "Como funciona" — filete azul-marinho que preenche cada passo ao
+   entrar na viewport. O mesmo --i do stagger dá o efeito de conector
+   que AVANÇA de um passo ao próximo. Anima só transform (scaleX).
+   Sem JS (sem .js) o filete fica cheio: é decorativo, degrada limpo.
+   ============================================================ */
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy-700), var(--navy-900));
+  transform-origin: left;
+}
+.js .step::before {
+  transform: scaleX(0);
+  transition: transform var(--dur-slow) var(--ease-out);
+  transition-delay: calc(min(var(--i, 0), 6) * 65ms);
+}
+.step.is-visible::before {
+  transform: scaleX(1);
+}
+
+/* ============================================================
    Reduced motion — sem deslocamento/blur; comprensão via fade leve.
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -104,5 +129,14 @@
   .reveal-lines.is-visible,
   .reveal-lines.is-visible .line__inner {
     opacity: 1;
+  }
+  /* Hero: sem hover-lift — retrato e chip estáticos */
+  .hero__photo,
+  .hero__label {
+    transition: none !important;
+  }
+  /* Stepper: filete aparece no estado final, sem preencher animado */
+  .js .step::before {
+    transition: none !important;
   }
 }

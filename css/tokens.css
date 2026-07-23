@@ -15,6 +15,12 @@
   --gold-soft: #d8bd7a;
   --gold-deep: #a8863a;
 
+  /* Verde OFICIAL do WhatsApp — cor de PLATAFORMA, não da paleta.
+     Isolada exclusivamente ao botão de WhatsApp do header (o "HUD" do topo).
+     Nunca usar como acento geral da página. */
+  --wa: #25d366;
+  --wa-deep: #1da851; /* hover — tom mais fechado, mantém contraste com o texto navy */
+
   --paper: #ffffff; /* base / papel */
   --paper-2: #f6f4ef; /* alternância morna de seção */
   --paper-3: #eef1f5; /* variação fria sutil */

@@ -113,6 +113,27 @@ p {
   background: var(--paper-3);
 }
 
+/* Faixa NAVY — distribui o azul-marinho pela página (mesma disposição da
+   LP de referência: "Para quem é", "Como funciona" e o fecho). Texto vira
+   claro; eyebrow/filetes em dourado claro para legibilidade sobre o azul. */
+.section--navy {
+  background: var(--navy-900);
+  color: var(--on-navy);
+}
+.section--navy h2 {
+  color: var(--paper);
+}
+.section--navy .lead {
+  color: var(--on-navy-70);
+}
+.section--navy .eyebrow {
+  color: var(--gold-soft);
+}
+.section--navy .eyebrow::before,
+.section--navy .eyebrow::after {
+  background: var(--gold-soft);
+}
+
 .measure {
   max-width: var(--maxw-text);
 }
@@ -208,6 +229,9 @@ p {
   .btn--on-navy:hover {
     background: var(--gold-soft);
   }
+  .btn--wa:hover {
+    background: var(--wa-deep);
+  }
 }
 
 .btn--primary {
@@ -229,6 +253,15 @@ p {
 .btn--on-navy {
   --btn-bg: var(--gold);
   --btn-fg: var(--navy-900);
+}
+
+/* WhatsApp — verde de plataforma (#25D366), restrito ao botão do header.
+   Texto/ícone em navy (Inchiostro): branco sobre #25D366 reprova em AA
+   (~2:1); navy sobre o verde passa com folga (~8.4:1). */
+.btn--wa {
+  --btn-bg: var(--wa);
+  --btn-fg: var(--navy-900);
+  box-shadow: 0 8px 22px -16px rgba(18, 140, 60, 0.9);
 }
 
 .btn--lg {
@@ -443,10 +476,12 @@ p {
 }
 
 @media (max-width: 560px) {
+  /* No celular o botão do header vira ícone-only (o rótulo longo estouraria
+     o header ao lado do menu). O nome acessível vem do aria-label no HTML. */
   .nav__cta .cta-full {
     display: none;
   }
-  /* CTA principal precisa de area de toque confortavel (44x44) */
+  /* Botão do header precisa de área de toque confortável (>=44x44) */
   .nav__cta {
     padding: 0.65rem 0.8rem;
     min-width: 44px;

@@ -209,8 +209,9 @@
 
         <a
           href="https://wa.me/5511976972750?text=Ol%C3%A1%2C%20Jo%C3%A3o.%20Acessei%20seu%20perfil%20no%20site%20da%20ES11%20e%20gostaria%20de%20conversar%20sobre%20meu%20planejamento%20patrimonial."
-          class="btn btn--primary btn--sm nav__cta js-wa"
+          class="btn btn--wa btn--sm nav__cta js-wa"
           data-cta-position="nav"
+          aria-label="Agendar Diagnóstico Gratuito pelo WhatsApp"
           target="_blank"
           rel="noopener"
         >
@@ -231,6 +232,11 @@
     <main id="top">
       <!-- ============ HERO ============ -->
       <section class="hero" id="hero" aria-labelledby="hero-h1">
+        <!-- Camada decorativa: orbs dourados estáticos. Puramente estética. -->
+        <div class="hero__orbs" aria-hidden="true">
+          <span class="hero-orb hero-orb-one"></span>
+          <span class="hero-orb hero-orb-two"></span>
+        </div>
         <div class="hero__glow" aria-hidden="true"></div>
         <div class="wrap hero__inner">
           <div class="hero__copy">
@@ -243,13 +249,13 @@
             </h1>
 
             <p class="hero__sub reveal">
-              Avalie caminhos para adquirir ativos, preservar liquidez e construir patrimônio de
-              forma planejada, com análise de cenários e sem pressão de venda.
+              Ajudo você a avaliar caminhos para adquirir ativos, preservar liquidez e construir
+              patrimônio de forma planejada — com análise de cenários e sem pressão de venda.
             </p>
 
             <ul class="hero__points reveal" role="list">
-              <li>Diagnóstico inicial gratuito, sem compromisso.</li>
-              <li>Estratégia personalizada para o seu momento e contexto.</li>
+              <li>Começo com um diagnóstico gratuito, sem compromisso.</li>
+              <li>Desenho uma estratégia para o seu momento e o seu contexto.</li>
               <li>Se o consórcio não for o melhor caminho, você vai ouvir isso de mim.</li>
             </ul>
 
@@ -267,19 +273,21 @@
             </div>
           </div>
 
-          <div class="hero__portrait reveal-media">
-            <div class="hero__frame">
+          <div class="hero__media reveal-media">
+            <div class="hero__photo-wrap">
+              <span class="hero__photo-outline" aria-hidden="true"></span>
               <img
+                class="hero__photo"
                 src="assets/img/joao-retrato.webp"
-                alt="João Vittor Andrade, consultor financeiro da ES11 Capital, sorrindo de braços cruzados"
+                alt="João Vittor Andrade, consultor financeiro da ES11 Capital"
                 width="720"
                 height="900"
                 fetchpriority="high"
               />
-            </div>
-            <div class="hero__badge" aria-hidden="true">
-              <span class="hero__badge-mark">ES<b>11</b></span>
-              <span>Fundador &amp; Consultor Financeiro</span>
+              <span class="hero__label">
+                <strong>João Vittor Andrade</strong>
+                <small>Fundador &amp; Consultor Financeiro</small>
+              </span>
             </div>
           </div>
         </div>
@@ -290,7 +298,8 @@
         <div class="wrap sobre__grid">
           <div class="sobre__media reveal-media">
             <img
-              src="assets/img/joao-es11.webp"
+              src="assets/img/joao-es11.jpg
+              "
               alt="João Vittor Andrade trabalhando na sala de reuniões da ES11 Capital"
               width="800"
               height="1000"
@@ -306,20 +315,20 @@
 
             <div class="sobre__text measure">
               <p class="reveal">
-                A trajetória de João Vittor começou antes do mercado financeiro. O esporte lhe
-                ensinou disciplina, resiliência e que resultados consistentes se constroem com
-                planejamento e não com sorte.
+                Minha trajetória começou antes do mercado financeiro. O esporte me ensinou
+                disciplina, resiliência e que resultado consistente se constrói com planejamento —
+                não com sorte.
               </p>
               <p class="reveal">
-                Ao longo da carreira, passou por empresas como <strong>iFood</strong>,
+                Ao longo da carreira, passei por empresas como <strong>iFood</strong>,
                 <strong>Loggi</strong> e <strong>XP Investimentos</strong> até fundar a
-                <strong>ES11 Capital</strong>, escritório dedicado a soluções financeiras para
-                empresários e investidores.
+                <strong>ES11 Capital</strong>, o escritório que criei para oferecer soluções
+                financeiras a empresários e investidores.
               </p>
               <p class="reveal">
-                Seu foco é ajudar clientes a construir patrimônio de forma inteligente, combinando —
+                Meu foco é ajudar você a construir patrimônio de forma inteligente, combinando —
                 quando fizer sentido — consórcio, investimentos, seguros e crédito estruturado.
-                Patrimônio não se constrói pagando juros altos, e sim tomando decisões planejadas.
+                Patrimônio não se constrói pagando juros altos; constrói-se com decisões planejadas.
               </p>
             </div>
 
@@ -335,14 +344,14 @@
       </section>
 
       <!-- ============ PARA QUEM É ============ -->
-      <section class="publico section section--tint" id="publico" aria-labelledby="publico-h2">
+      <section class="publico section section--navy" id="publico" aria-labelledby="publico-h2">
         <div class="wrap">
           <header class="section-head">
             <p class="eyebrow reveal">Para quem é o atendimento</p>
             <h2 class="reveal-lines" id="publico-h2">Isso faz sentido para você?</h2>
             <p class="lead measure reveal">
-              O atendimento é consultivo e serve a quem trata patrimônio como decisão de longo
-              prazo. Você provavelmente se identifica se está em um destes perfis.
+              Meu atendimento é consultivo e serve a quem trata patrimônio como decisão de longo
+              prazo. Você provavelmente se identifica com um destes perfis.
             </p>
           </header>
 
@@ -385,10 +394,10 @@
         <div class="wrap">
           <header class="section-head">
             <p class="eyebrow reveal">Especialidades</p>
-            <h2 class="reveal-lines" id="esp-h2">Como o João pode ajudar</h2>
+            <h2 class="reveal-lines" id="esp-h2">Como eu posso ajudar você</h2>
             <p class="lead measure reveal">
-              Uma visão geral do trabalho. Os detalhes ganham forma no diagnóstico, quando a
-              estratégia é desenhada para o seu caso.
+              Uma visão geral do meu trabalho. Os detalhes ganham forma no diagnóstico, quando
+              desenho a estratégia para o seu caso.
             </p>
           </header>
 
@@ -442,7 +451,7 @@
       </section>
 
       <!-- ============ COMO FUNCIONA ============ -->
-      <section class="como section section--cool" id="como-funciona" aria-labelledby="como-h2">
+      <section class="como section section--navy" id="como-funciona" aria-labelledby="como-h2">
         <div class="wrap">
           <header class="section-head">
             <p class="eyebrow reveal">Como funciona o atendimento</p>
@@ -492,7 +501,7 @@
             loading="lazy"
           />
           <div class="es11__body">
-            <p class="eyebrow reveal">A estrutura por trás do atendimento</p>
+            <p class="eyebrow reveal">A estrutura por trás do meu atendimento</p>
             <h2 class="reveal-lines" id="es11-h2">
               Atendimento consultivo com a<br />estrutura da ES11 Capital
             </h2>
